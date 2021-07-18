@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,700;1,400&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  overflow-x: hidden;
+  background-color: #333;
+  color: #222;
+  margin: 0;
+}
+
+h1 {
+  font-size: 4.06em;
+}
+h2 {
+  font-size: 1.875em;
+}
+p {
+  font-size: 1.25em;
+}
+
+.container {
+  background-color: #fafafa;
+  transform-origin: top left;
+  transition: transform 0.5s linear;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 50px;
+}
+.container.show-nav {
+  transform: rotate(-20deg);
+}
+.container.show-nav .circle {
+  transform: rotate(-70deg);
+}
+.container.container.show-nav + nav li {
+  transform: translateX(0);
+  transition-delay: 0.3s;
+}
+.circle-container {
+  position: fixed;
+  top: -100px;
+  left: -100px;
+}
+.circle {
+  background-color: #ff7979;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  position: relative;
+  transition: transform 0.5s linear;
+}
+
+.circle button {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100px;
+  background: transparent;
+  border: 0;
+  font-size: 26px;
+  color: #fff;
+}
+.circle button:focus {
+  outline: none;
+}
+.circle button#open {
+  left: 60%;
+}
+.circle button#close {
+  top: 60%;
+  transform: rotate(90deg);
+  transform-origin: top left;
+}
+nav {
+  position: fixed;
+  bottom: 40px;
+  left: 0;
+  z-index: 100;
+}
+nav ul {
+  list-style-type: none;
+  padding-left: 30px;
+}
+nav ul li {
+  text-transform: uppercase;
+  color: #fff;
+  margin: 40px 0;
+  transform: translateX(-100%);
+  transition: transform 0.4s ease-in;
+}
+nav ul li i {
+  font-size: 20px;
+  margin-right: 10px;
+}
+nav ul li + li {
+  margin-left: 15px;
+  transform: translateX(-150%);
+}
+nav ul li + li + li {
+  margin-left: 30px;
+  transform: translateX(-200%);
+}
+#main {
+  max-width: 1000px;
+  margin: auto;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+#title {
+  text-align: center;
+}
+#title p {
+  padding-bottom: 2%;
+  font-size: 1.6em;
+}
+#img-div {
+  padding: 1em;
+}
+#img-div img {
+  display: block;
+  max-width: 80%;
+  height: auto;
+  margin: auto;
+}
+#img-caption {
+  text-align: center;
+  padding-top: 1em;
+  padding-bottom: 2em;
+  font-size: 1.5em;
+  font-style: italic;
+}
+#tribute-info {
+  padding: 0.5em;
+}
+#biography {
+  margin-bottom: 1.5em;
+}
+#biography h2,
+#sermon h2 {
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+#biography p,
+#sermon p {
+  text-align: justify;
+  line-height: 1.5;
+}
+#sermon {
+  margin-top: 1.5em;
+}
